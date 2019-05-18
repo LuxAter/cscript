@@ -12,6 +12,7 @@ add_library(cscript ${lib_src})
 
 add_executable(cscript.exe "${CMAKE_CURRENT_SOURCE_DIR}/src/main.c")
 target_link_libraries(cscript.exe cscript)
+target_link_libraries(cscript.exe edit)
 
 IF (EXISTS "${CMAKE_CURRENT_BINARY_DIR}/compile_commands.json")
   EXECUTE_PROCESS(COMMAND ${CMAKE_COMMAND} -E copy_if_different
